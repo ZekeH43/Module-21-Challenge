@@ -12,3 +12,9 @@ Successful compilation of KaseiCoinCrowdsale Contract
 
 
 ![image](https://github.com/ZekeH43/Module-21-Challenge/assets/143846311/3b28e74b-e67c-4aa0-b2cb-a84fc1ca113b)
+
+
+
+Step 1 deploy using Ganache and Metamask
+
+![image](https://github.com/ZekeH43/Module-21-Challenge/assets/143846311/8887da44-74a5-4f1f-8aef-3dc378843d6d)
