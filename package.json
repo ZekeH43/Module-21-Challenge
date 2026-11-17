@@ -1,0 +1,15 @@
+{
+  "name": "kaseicoin-legacy-verification",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Disposable Solidity 0.5.17 / OpenZeppelin 2.5.0 coursework checks",
+  "scripts": {
+    "test": "node --test tests/kaseicoin.test.cjs"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "2.5.0",
+    "ethers": "5.7.2",
+    "ganache": "7.9.2",
+    "solc": "0.5.17"
+  }
+}
