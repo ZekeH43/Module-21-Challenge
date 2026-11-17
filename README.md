@@ -23,7 +23,18 @@ The deployer hardcodes a rate of `1` (the unit is token base units per wei in th
 4. Run experiments only in a local simulated chain with test accounts and test Ether. Deploy the crowdsale deployer with a nonzero recipient wallet and inspect its published token and crowdsale addresses.
 5. Check minting permissions, token balance changes, sale rate, purchaser behavior, and failure cases described in [the test plan](docs/CONTRACT_REVIEW.md).
 
-**Compilation, external imports, transaction execution, and automated testing have not been verified in this cleanup.** Older dependency URLs and compiler support may fail or require additional work.
+Automated tests are now included to resolve the historical imports against the **exact locally installed OpenZeppelin 2.5.0** package, compile both source contracts using `solc@0.5.17`, and deploy/purchase on a disposable Ganache chain. See `tests/kaseicoin.test.cjs` and the GitHub Actions workflow. Check the latest CI result before merging. This does not verify the old GitHub URL imports in modern Remix, and does not establish production security.
+
+## Run automated compilation and local purchase tests
+
+With Node.js 22 installed, from the repository root:
+
+```bash
+npm install --no-package-lock
+npm test
+```
+
+The tests use a local EVM and simulated funds only. The direct package versions are fixed in `package.json`; without a committed lockfile, transitive dependencies are not fully pinned. This is an educational verification environment, not a live-network deployment.
 
 ## Risks and current limitations
 
