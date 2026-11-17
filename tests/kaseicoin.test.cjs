@@ -93,7 +93,7 @@ test("deployer delegates minting and buyer gets tokens on a local EVM", async ()
   const sale = new ethers.Contract(saleAddress, compiled.sale.abi, provider);
   assert.equal(await token.name(), "Kasei Coin");
   assert.equal(await token.symbol(), "KASEI");
-  assert.equal((await token.decimals()).toNumber(), 18);
+  assert.equal(Number(await token.decimals()), 18);
   assert.equal((await token.totalSupply()).toString(), "0");
   assert.equal((await sale.rate()).toString(), "1");
   assert.equal(await token.isMinter(saleAddress), true);
