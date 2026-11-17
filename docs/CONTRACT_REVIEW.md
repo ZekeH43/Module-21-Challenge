@@ -15,7 +15,7 @@
 6. Verify a non-minter cannot invoke `mint` and the deploying address has renounced the minting role.
 7. Test invalid or zero deployment parameters and failed purchases, noting which conditions the archived OpenZeppelin library enforces.
 
-These are **test instructions**, not recorded test results. Automated CI, static-analysis results, and successful Remix deployment are not asserted.
+The GitHub Actions workflow now includes an **automated compile and local-chain regression test**, separate from the manual Remix instructions above. It installs exact direct versions of Solidity 0.5.17 and OpenZeppelin Contracts 2.5.0, checks contract deployment, minting roles, buyer balances, forwarded Ether, and invalid purchase behavior. Check the current GitHub Actions outcome; there is no formal audit or real-chain deployment.
 
 ## Security and maintenance limits
 
