@@ -1,0 +1,19 @@
+name: Solidity 0.5 crowdsale tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install exact legacy compiler and OpenZeppelin version
+        run: npm install --no-package-lock
+      - name: Compile and test on disposable Ganache chain
+        run: npm test
